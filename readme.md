@@ -33,30 +33,35 @@ It provides simple commands to create, list, update, and delete AWS resources su
 
 ---
 
-## ️ Installation
+## ️ Installation - 
+
+0. yum install git -y
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
+   git clone https://github.com/RoyAzran/python-aws.git
+   cd python-aws
    ```
-
-2. (Optional) Create a virtual environment:
+2.  Create a virtual environment:
    ```bash
-   python -m venv .venv
+   yum install pip -y
+   python3 -m venv .venv
    source .venv/bin/activate   # Linux / macOS
    .venv\Scripts\activate      # Windows
    ```
 
 3. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+     pip install -r requirements.txt
    ```
 
 4. Configure your AWS CLI credentials:
    ```bash
    aws configure
+   put aws accsess key , secret key and region
    ```
+5. alias roycli="python3 /home/ec2-user/python-aws/main.py"
+
 
 ---
 
@@ -65,39 +70,31 @@ It provides simple commands to create, list, update, and delete AWS resources su
 Run the CLI with Python:
 
 ```bash
-python main.py --help
+roycli main.py --help
 ```
 
 ### EC2 examples
 ```bash
-python main.py create-ec2 --name testvm --ami ubuntu --key my-key --type t3.micro --count 1
-python main.py list-ec2
-python main.py stop-ec2 --id i-0123456789abcdef0
-python main.py start-ec2 --id i-0123456789abcdef0
+roycli create-ec2 --name testvm --ami ubuntu --key my-key --type t3.micro --count 1
+roycli list-ec2
+roycli stop-ec2 --id i-0123456789abcdef0
+roycli start-ec2 --id i-0123456789abcdef0
 ```
 
 ### S3 examples
 ```bash
-python main.py create-s3 --name mybucket123
-python main.py list-s3
-python main.py upload-s3 --path ./file.txt --name mybucket123 --file-name file.txt
-python main.py delete-s3 --name mybucket123
-```
+roycli create-s3 --name mybucket123
+roycli list-s3
+roycli upload-s3 --path ./file.txt --name mybucket123 --file-name file.txt
+roycli delete-s3 --name mybucket123
 
 ### Route 53 examples
 ```bash
-python main.py create-r53 --name mydomain.com
-python main.py list-r53
-python main.py update-r53 --zone_id Z12345ABC --action CREATE --name mydomain.com --type A --value "1.2.3.4"
+roycli create-r53 --name mydomain.com
+roycli list-r53
+roycli update-r53 --zone_id Z12345ABC --action CREATE --name mydomain.com --type A --value "1.2.3.4"
 ```
 
 ---
 
-##  Requirements
 
-- Python 3.8+
-- AWS CLI configured with credentials
-- boto3 / botocore
-- click
-
----
