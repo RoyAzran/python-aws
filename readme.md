@@ -96,6 +96,13 @@ roycli update-r53 --zone_id Z12345ABC --action CREATE --name mydomain.com --type
 ```
 
 ---
+Screenshots of cli:
+
+<img width="1256" height="457" alt="image" src="https://github.com/user-attachments/assets/78923402-a3b6-4c46-a5d2-9559149b9c34" />
+
+<img width="1359" height="175" alt="image" src="https://github.com/user-attachments/assets/150ce777-b04c-4c98-a9e4-c1a9dde9894f" />  
+
+<img width="1136" height="235" alt="image" src="https://github.com/user-attachments/assets/e0b721ff-62e1-4cea-ab9d-d196924c0541" />
 
 
 
