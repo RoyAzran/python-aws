@@ -70,7 +70,7 @@ It provides simple commands to create, list, update, and delete AWS resources su
 Run the CLI with Python:
 
 ```bash
-roycli main.py --help
+roycli  --help
 ```
 
 ### EC2 examples
@@ -96,5 +96,6 @@ roycli update-r53 --zone_id Z12345ABC --action CREATE --name mydomain.com --type
 ```
 
 ---
+
 
 
